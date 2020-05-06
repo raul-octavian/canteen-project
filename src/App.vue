@@ -1,32 +1,274 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <header>
+      <div id="navigation">
+        <router-link to="/">
+          <div id="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 28.55">
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="Layer_1-2" data-name="Layer 1">
+                  <g id="easv_new_logo" data-name="easv new logo">
+                    <path
+                      id="Path_8"
+                      data-name="Path 8"
+                      class="cls-1"
+                      d="M10.21,16.54h7.47c.61,0,1.22-.05,1.83-.05s.95.05,1.43.05c.65,0,1.31-.05,2-.05s1.45,0,2.17.05h7.65l6.09-.08,4.8,0H55.73c.58,0,1.15.05,1.73.05s.85-.05,1.28-.05c.66,0,1.32.05,2,.05,1.29,0,2.57,0,3.85,0,1.91,0,3.83.11,5.74.13,2.13,0,4.26,0,6.38,0h8.6l4.89-.08c.91,0,1.82,0,2.72,0l2,.07A1.16,1.16,0,0,1,96,17.85s0,.1,0,.15a3.43,3.43,0,0,1-.34,1.07,9.62,9.62,0,0,1-1.86,2.16,13.27,13.27,0,0,1-4.12,2.42c-1.47.62-3,1.23-4.57,1.73a39.75,39.75,0,0,1-4.18,1c-1.53.3-3.07.57-4.62.74-1.77.2-3.52.48-5.3.53-1.2,0-2.39.19-3.59.26s-2.27.13-3.41.15c-1.91.05-3.82.08-5.73.12L55,28.27l-6.24.11-6.27.17a5.54,5.54,0,0,1-2.32-.4,3.25,3.25,0,0,1-1.56-1.39A3.94,3.94,0,0,1,38,24.54a10.4,10.4,0,0,0-.11-2.16c-.1-.61-.24-.83-.86-.88s-1.21-.05-1.82-.06H33.8a15.55,15.55,0,0,0-5.11.74c-.76.25-1.56.4-2.34.61-.51.15-1,.34-1.5.5a13.22,13.22,0,0,1-4.92.65c-1.08-.07-2.15-.31-3.23-.4a20,20,0,0,0-4.08-.34,10.46,10.46,0,0,0-3.06.74A12.56,12.56,0,0,1,6.24,25a6.9,6.9,0,0,1-2.89-.25A4.36,4.36,0,0,1,.48,22.4a4,4,0,0,1,1.74-5.35L2.35,17a3.44,3.44,0,0,1,1.33-.34c1.75-.06,3.49-.08,5.24-.11h1.29ZM5.94,21.78A1.54,1.54,0,1,0,4.4,20.16,1.66,1.66,0,0,0,5.94,21.78Z"
+                    />
+                    <path
+                      id="Path_9"
+                      data-name="Path 9"
+                      class="cls-1"
+                      d="M76.46,7.58c0,.31.08.41.35.44,1.93.15,3.86.33,5.8.49,1.24.1,2.5.17,3.74.25L89,8.89l4.24.21a2.54,2.54,0,0,1,.54.09.67.67,0,0,1,.54.51.63.63,0,0,1-.55.56,13.29,13.29,0,0,1-1.41.2c-.38,0-.76,0-1.14,0s-.72.06-1.08.08-.61,0-.92,0l-2.57.12-1.72.05-3.6.07c-.69,0-1.38.06-2.08.09L77.64,11a3.14,3.14,0,0,0-.68.13.27.27,0,0,0-.17.25.28.28,0,0,0,.2.22,3.3,3.3,0,0,0,.63.09c1.73.17,3.47.34,5.21.49.7.06,1.42.07,2.12.1l4.69.28,3.85.19a3.07,3.07,0,0,1,.53.07c.32.07.43.36.2.59a1.21,1.21,0,0,1-.58.33,14.67,14.67,0,0,1-1.47.16c-1,.06-2.07.11-3.11.15l-1.23,0c-1,0-2,.07-3,.12l-4.59.24c-.79,0-1.58.05-2.37.1-1.43.06-2.86.16-4.29.2a15,15,0,0,1-3.84-.17,6.76,6.76,0,0,1-4.47-3.16c-.22-.37-.47-.72-.71-1.07a2,2,0,0,0-1.77-.92c-1.56,0-3.13,0-4.7.08-1.89.06-3.78.14-5.67.19-2.16.07-4.32.11-6.48.17l-3.11.07-6.57.16-6.33.15-6.62.16-7,.19-1.93,0-4.79.15h-.2L4,10.86c-.48,0-1,.06-1.43.06a1.31,1.31,0,0,1-.61-.15A3.48,3.48,0,0,1,0,7.7,3.79,3.79,0,0,1,.68,5.24,4.2,4.2,0,0,1,1.4,4.5a1.31,1.31,0,0,1,1.26-.25,3.07,3.07,0,0,0,.68.06L9,4.53l3.45.13,3.26.13,3.25.12,3.2.11c1.42,0,2.83.06,4.25.11l2,.09,3.5.14,3.21.12,5.18.16,5.91.2c1.52.06,3,.14,4.55.19l6,.2c1.23,0,2.46.13,3.7.17a20.43,20.43,0,0,0,2.07,0,2.76,2.76,0,0,0,2.14-1.27c.45-.65.88-1.31,1.33-2A7.14,7.14,0,0,1,71.1,0a11.36,11.36,0,0,1,2,0L77,.17c.83,0,1.67.09,2.51.12s1.78.05,2.67.08l3.7.17c.58,0,1.16,0,1.72,0l5.24.22.83,0a1.09,1.09,0,0,1,.25,0c.2.07.44.18.42.41a.82.82,0,0,1-.28.49.71.71,0,0,1-.4.16c-.9.12-1.8.25-2.7.31-1.41.12-2.82.2-4.24.3l-2.46.14L79.8,3c-.74,0-1.48.09-2.22.15a4.49,4.49,0,0,0-.64.1c-.16,0-.29.08-.28.27s.16.27.33.28l1.18.12c1.66.15,3.31.3,5,.42,1.2.09,2.4.13,3.6.2.56,0,1.12.09,1.68.12l3.6.2c.39,0,.79,0,1.18.08a2.33,2.33,0,0,1,.52.13.55.55,0,0,1,.38.53.56.56,0,0,1-.48.44c-.42.06-.85.13-1.27.16-.95.07-1.9.12-2.86.18s-1.68.09-2.51.15c-2.07.16-4.14.31-6.2.48-1.13.1-2.26.22-3.39.35C77.08,7.41,76.76,7.49,76.46,7.58Z"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </router-link>
+        <div class="nav-link-container">
+          <router-link class="nav-link" to="/">Home</router-link>
+          <router-link class="nav-link" to="/Recepies">Recepies</router-link>
+          <router-link class="nav-link" to="/contact">Contact</router-link>
+        </div>
+      </div>
+    </header>
+    <main>
+      <internalLink></internalLink>
+      <section class="main">
+        <router-view />
+      </section>
+      <externalLink></externalLink>
+    </main>
   </div>
 </template>
+<script>
+import internalLink from "@/components/internalLink";
+import externalLink from "@/components/externalLink";
+
+export default {
+  components: {
+    internalLink: internalLink,
+    externalLink: externalLink
+  },
+  data() {
+    return {
+      products: [
+        {
+          name: "Clasic Hamburger",
+          type: "Food",
+          image: "@/assets/hamburger.jpg",
+          alt: "hamburger image",
+          about:
+            "Perfectly cooked beef burger betwen two grilled paties and flesh vegetables",
+          ingredients: [
+            "ground beef",
+            "onions",
+            "tomatoes",
+            "lettuce",
+            "ketchup"
+          ],
+          alergens: ["gluten"]
+        },
+        {
+          name: "Orange Juice",
+          type: "Drinks",
+          image: "@/assets/orange-soda.jpg",
+          alt: "orange juice image",
+          about: "Freshly squeeed organic orange juice",
+          ingredients: ["orage", "pebbermint", "ice"],
+          alergens: []
+        },
+        {
+          name: "Strawberry Cake",
+          type: "Deserts",
+          image: "@/assets/strawbery-cake.jpg",
+          alt: "cake image",
+          about:
+            "Sweet and sawer, delicios strawvery and mascarpone cake, on a bed of fresh biscuit",
+          ingredients: ["strawbery", "mascarpone", "biscuits", "sugar", "eggs"],
+          alergens: ["egs", "gluten", "small-seeded fruit"]
+        },
+        {
+          name: "Brownie",
+          type: "Deserts",
+          image: "@/assets/brownie.jpg",
+          alt: "brownie image",
+          about: "Sweet, delicios chocolate filled brownie",
+          ingredients: ["chocolate", "cream", "flower", "sugar", "eggs"],
+          alergens: ["egs", "gluten"]
+        },
+        {
+          name: "Chessecake",
+          type: "Deserts",
+          image: "@/assets/chessecake.jpg",
+          alt: "cheesecake image",
+          about: "Sweet, delicios and creamy chessecake",
+          ingredients: ["mascarpone chese", "cream", "flower", "sugar", "eggs"],
+          alergens: ["egs", "gluten"]
+        },
+        {
+          name: "Pasta",
+          type: "Food",
+          image: "@/assets/pasta.jpg",
+          alt: "pasta image",
+          about: "Extraordinary sweet tomato souce over freshly made pasta",
+          ingredients: [
+            "tomatoes",
+            "garlic",
+            "parmegiano",
+            "basil",
+            "flower",
+            "eggs",
+            "basil"
+          ],
+          alergens: ["egs", "gluten"]
+        },
+        {
+          name: "Snitzel",
+          type: "Food",
+          image: "@/assets/snitzell.jpg",
+          alt: "snitzel image",
+          about: "Perfectlly deep fried and moist snitzel and french fries",
+          ingredients: [
+            "chichen breast",
+            "breadcrums",
+            "parmegiano",
+            "potatoes",
+            "eggs"
+          ],
+          alergens: ["egs", "gluten"]
+        },
+        {
+          name: "Limonade",
+          type: "Drinks",
+          image: "@/assets/limonade.jpg",
+          alt: "limonade glass image",
+          about:
+            "Sweet, sawer and refreshing lemonade with strawebery and mint and ice ",
+          ingredients: ["lemon", "strawberry", "mint", "sugar", "ice"],
+          alergens: ["small seeded fruits"]
+        },
+        {
+          name: "Apple Juice",
+          type: "Drinks",
+          image: "@/assets/apple-juice.jpg",
+          alt: "apple juice glass image",
+          about: "Sweet, refreshing apple juice  ",
+          ingredients: ["apple"],
+          alergens: []
+        }
+      ]
+    };
+  }
+};
+</script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import "@/styles/_variables.scss";
+
+* {
+  color: $main-color;
+  padding: 0;
+  margin: 0;
+}
+.cls-1 {
+  fill: #cbbc8f;
 }
 
-#nav {
-  padding: 30px;
+header {
+  width: 100%;
+  height: 80px;
+  background-color: $main-color;
+  color: $secondary-color;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+#app {
+  min-height: 100vh;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
+#navigation {
+  display: flex;
+  justify-content: flex-start;
+  width: 100vw;
+  padding: 20px;
+}
+
+#logo {
+  height: 100%;
+  padding: 10px;
+  svg {
+    height: 30px;
+  }
+}
+.nav-link-container {
+  flex-grow: 1;
+  display: flex;
+}
+.nav-link {
+  line-height: 30px;
+  margin: 0 40px;
+  text-decoration: none;
+  color: $secondary-color;
+}
+main {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-top: 80px;
+}
+.main {
+  flex-grow: 1;
+  padding: 0 80px;
+}
+#side-navigation {
+  width: 80px;
+  background-color: $main-color;
+  height: calc(100vh - 80px);
+  position: fixed;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+
+@media screen and (max-width: 720px) {
+  header {
+    height: 60px;
+  }
+  #navigation {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #logo {
+    height: 100%;
+    padding: 0 10px;
+    svg {
+      height: 20px;
     }
+  }
+  .nav-link {
+    margin: 0 10px;
+  }
+  #side-navigation {
+    width: 60px;
+    height: calc(100vh - 60px);
+  }
+  .main {
+    padding: 0 60px;
+  }
+  main {
+    min-height: calc(100vh - 60px);
+    padding-top: 60px;
   }
 }
 </style>
