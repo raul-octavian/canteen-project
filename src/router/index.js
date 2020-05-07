@@ -14,13 +14,13 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-    props: true,
+    props: true
   },
   {
     path: "/Recepies",
     name: "Recepies",
     component: Recepies,
-    props: true,
+    props: true
   },
   {
     path: "/Contact",
@@ -31,23 +31,24 @@ const routes = [
     path: "/Food",
     name: "Food",
     component: Food,
-    props: true,
+    props: true
   },
   {
     path: "/Drinks",
     name: "Drinks",
     component: Drinks,
-    props: true,
+    props: true
   },
   {
     path: "/Deserts",
     name: "Deserts",
     component: Deserts,
-    props: true,
+    props: true
   }
 ];
 
 const router = new VueRouter({
+  mode: "history",
   routes
 });
 

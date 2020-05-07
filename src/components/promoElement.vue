@@ -10,7 +10,6 @@
 
 <script>
 export default {
-
   props: {
     name: String,
     type: String,
@@ -20,8 +19,7 @@ export default {
     ingredients: Array,
     alergens: Array,
     category: String
-   
-  },
+  }
 };
 </script>
 

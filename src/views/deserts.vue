@@ -4,7 +4,7 @@
     <div class="line"></div>
     <section class="element-container">
       <elementItem
-        v-for="product in productsTotal"
+        v-for="product in filterDeserts"
         v-bind:name="product.name"
         v-bind:type="product.type"
         v-bind:image="product.image"
@@ -20,6 +20,7 @@
 <script>
 // @ is an alias to /src
 import elementItem from "@/components/element.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Drinks",
@@ -27,42 +28,9 @@ export default {
     elementItem: elementItem
   },
   data() {
-    return {
-      products: [
-     
-     
-        {
-          name: "Strawberry Cake",
-          type: "Deserts",
-          image: "@/assets/strawbery-cake.jpg",
-          alt: "cake image",
-          about:
-            "Sweet and sawer, delicios strawvery and mascarpone cake, on a bed of fresh biscuit",
-          ingredients: ["strawbery", "mascarpone", "biscuits", "sugar", "eggs"],
-          alergens: ["egs", "gluten", "small-seeded fruit"]
-        },
-        {
-          name: "Brownie",
-          type: "Deserts",
-          image: "@/assets/brownie.jpg",
-          alt: "brownie image",
-          about: "Sweet, delicios chocolate filled brownie",
-          ingredients: ["chocolate", "cream", "flower", "sugar", "eggs"],
-          alergens: ["egs", "gluten"]
-        },
-        {
-          name: "Chessecake",
-          type: "Deserts",
-          image: "@/assets/chessecake.jpg",
-          alt: "cheesecake image",
-          about: "Sweet, delicios and creamy chessecake",
-          ingredients: ["mascarpone chese", "cream", "flower", "sugar", "eggs"],
-          alergens: ["egs", "gluten"]
-        },
-        
-      ]
-    };
-  }
+    return {};
+  },
+  computed: mapGetters(["allProducts", "filterDeserts"])
 };
 </script>
 

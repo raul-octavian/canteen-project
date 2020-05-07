@@ -4,7 +4,7 @@
     <div class="line"></div>
     <section class="element-container">
       <elementItem
-        v-for="product in products"
+        v-for="product in filterFood"
         v-bind:name="product.name"
         v-bind:type="product.type"
         v-bind:image="product.image"
@@ -22,68 +22,21 @@
 <script>
 // @ is an alias to /src
 import elementItem from "@/components/element.vue";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Food",
+
   components: {
     elementItem: elementItem
   },
+  methods: {},
   data() {
     return {
-      products: [
-        {
-          name: "Clasic Hamburger",
-          type: "Food",
-          image: "https://en.wikipedia.org/wiki/Hamburger#/media/File:RedDot_Burger.jpg",
-          alt: "hamburger image",
-          about:
-            "Perfectly cooked beef burger betwen two grilled paties and flesh vegetables",
-          ingredients: [
-            "ground beef",
-            "onions",
-            "tomatoes",
-            "lettuce",
-            "ketchup"
-          ],
-          alergens: ["gluten"]
-        },
-       
-        {
-          name: "Pasta",
-          type: "Food",
-          image: "@/assets/pasta.jpg",
-          alt: "pasta image",
-          about: "Extraordinary sweet tomato souce over freshly made pasta",
-          ingredients: [
-            "tomatoes",
-            "garlic",
-            "parmegiano",
-            "basil",
-            "flower",
-            "eggs",
-            "basil"
-          ],
-          alergens: ["egs", "gluten"]
-        },
-        {
-          name: "Snitzel",
-          type: "Food",
-          image: "@/assets/snitzell.jpg",
-          alt: "snitzel image",
-          about: "Perfectlly deep fried and moist snitzel and french fries",
-          ingredients: [
-            "chichen breast",
-            "breadcrums",
-            "parmegiano",
-            "potatoes",
-            "eggs"
-          ],
-          alergens: ["egs", "gluten"]
-        },
-       
-      ]
+      food: []
     };
-  }
+  },
+  computed: mapGetters(["allProducts", "filterFood"])
 };
 </script>
 

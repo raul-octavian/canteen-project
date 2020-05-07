@@ -35,6 +35,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  &:hover {
+    box-shadow: inset 0px 2px 2px rgba($color: #000000, $alpha: 0.3),
+      inset 0px -2px 2px rgba($color: #000000, $alpha: 0.3);
+  }
 
   .link-container {
     width: 60px;

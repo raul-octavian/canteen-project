@@ -6,8 +6,18 @@
         <div class="card-text">
           <h2>{{ name }}</h2>
           <p>{{ about }}</p>
-          <p>Ingredients: <ul><li v-for="ingredient in ingredients" v-bind:key="ingredient">{{ ingredient}},</li></ul></p>
-          <p v-if="alergens.length > 0" class="alergy-list">Allergens: <ul><li v-for="alergen in alergens" v-bind:key="alergen">{{alergen}}</li></ul></p>
+          <p>
+            <span>Ingredients:</span>
+          </p>
+          <ul>
+            <li v-for="ingredient in ingredients" v-bind:key="ingredient">{{ ingredient }},</li>
+          </ul>
+          <p v-if="alergens.length > 0" class="alergy-list">
+            <span>Allergens:</span>
+          </p>
+          <ul>
+            <li v-for="alergen in alergens" v-bind:key="alergen">{{ alergen }},</li>
+          </ul>
         </div>
       </div>
       <div class="line-card"></div>
@@ -26,18 +36,12 @@ export default {
     ingredients: Array,
     alergens: Array,
     category: String
-   
   },
 
   data() {
-      return {
-      }
+    return {};
   },
-  methods: {
-
-      
-  },
-  
+  methods: {}
 };
 </script>
 
@@ -49,10 +53,8 @@ export default {
 
   .line-card {
     border-bottom: 1px solid rgba($color: $main-color, $alpha: 0.7);
-    width: 70%;
-    float: right;
-    margin-right: 60px;
-    margin-top: 0;
+    width: 80%;
+    margin: 10px auto;
   }
 
   .card-container {
@@ -64,14 +66,13 @@ export default {
       max-width: 250px;
       height: 180px;
       width: 180px;
-      flex-grow: 1;
     }
     .card-text {
-      flex-grow: 3;
       padding: 0 20px 20px 20px;
       display: flex;
       flex-direction: column;
       position: relative;
+      flex: 9;
 
       h2 {
         font-size: 2rem;
@@ -80,12 +81,15 @@ export default {
       p {
         margin-bottom: 10px;
         text-align: left;
+        span {
+          font-weight: bold;
+        }
       }
       .alergy-list {
         margin-bottom: 10px;
       }
       ul {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
         list-style: none;
         margin-top: 5px;
@@ -112,10 +116,12 @@ export default {
         height: 150px;
         width: 150px;
         align-self: center;
+        flex: 6;
       }
       .card-text {
         h2 {
           align-self: center;
+          flex: 6;
         }
       }
     }

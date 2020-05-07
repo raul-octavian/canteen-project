@@ -2,7 +2,7 @@
   <section class="container">
     <h1>Erhvervsakademi Sydvest Canteen</h1>
     <p>
-      we want to hear form you, so send us your favorit recepies and they might
+      We want to hear form you, so send us your favorit recepies and they might
       end up on our permanent menu
     </p>
     <div class="line"></div>
@@ -61,7 +61,7 @@ export default {
 form {
   width: 70%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,7 +89,10 @@ form {
         display: inline-block;
         background-color: $main-color;
         color: $secondary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
         padding: 0 5px;
+        cursor: pointer;
       }
     }
   }
@@ -98,6 +101,7 @@ form {
     min-height: 25vh;
     margin-bottom: 20px;
     border: 1px solid $main-color;
+
     padding: 5px 10px;
     outline: none;
     color: $main-color;
@@ -107,5 +111,14 @@ form {
   .element-container {
     padding: 0;
   }
+}
+button {
+  background-color: $main-color;
+  color: $secondary-color;
+  padding: 10px 30px;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
 }
 </style>
